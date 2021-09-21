@@ -8,6 +8,7 @@ screen = pygame.display.set_mode((game_width, game_height))
 clock = pygame.time.Clock()
 running = True
 
+background_image = pygame.image.load("../assets/BG_Sand.png")
 
 
 # ***************** Loop Land Below *****************
@@ -20,7 +21,7 @@ while running:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
 
-
+    screen.blit(background_image, (0,0))
 
 
     # Tell pygame to update the screen
